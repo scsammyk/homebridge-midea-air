@@ -76,6 +76,7 @@ export class MideaAccessory {
 		if (tsteps) {
 			this.temperatureSteps = tsteps;
 		}
+		this.useFahrenheit = this.platform.getDeviceSpecificOverrideValue(this.deviceId, 'useFahrenheit');
 
 		this.platform.log.info('Created device:', this.name + ',', 'with ID:', this.deviceId + ',', 'and type:', this.deviceType)
 
